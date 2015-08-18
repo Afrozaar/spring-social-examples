@@ -12,15 +12,8 @@ import javax.validation.constraints.Size;
 /**
  * @author Petri Kainulainen
  */
-@PasswordsNotEmpty(
-        triggerFieldName = "signInProvider",
-        passwordFieldName = "password",
-        passwordVerificationFieldName = "passwordVerification"
-)
-@PasswordsNotEqual(
-        passwordFieldName = "password",
-        passwordVerificationFieldName = "passwordVerification"
-)
+@PasswordsNotEmpty(triggerFieldName = "signInProvider", passwordFieldName = "password", passwordVerificationFieldName = "passwordVerification")
+@PasswordsNotEqual(passwordFieldName = "password", passwordVerificationFieldName = "passwordVerification")
 public class RegistrationForm {
 
     public static final String FIELD_NAME_EMAIL = "email";
@@ -106,11 +99,6 @@ public class RegistrationForm {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("email", email)
-                .append("firstName", firstName)
-                .append("lastName", lastName)
-                .append("signInProvider", signInProvider)
-                .toString();
+        return new ToStringBuilder(this).append("email", email).append("firstName", firstName).append("lastName", lastName).append("signInProvider", signInProvider).toString();
     }
 }

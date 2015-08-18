@@ -32,4 +32,5 @@ public class ExampleApplicationContext {
     public PropertySourcesPlaceholderConfigurer propertyPlaceHolderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
+    
 }
